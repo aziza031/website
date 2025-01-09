@@ -22,5 +22,4 @@ AureliTix adalah website untuk pemesanan tiket bioskop yang memudahkan pengguna 
 4. Jika pesanan sudah sesuai, klik place order maka data pemesanan anda sudah selesai.
 5. Klik menu "Feedback" untuk memberikan pesan mengenai websitenya
 
-   **Visit My Website**: [https://aziza031.github.io/Website/]
-   (https://aziza031.github.io/Website/login)
+   **Visit My Website**: https://aziza031.github.io/website/login
