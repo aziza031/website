@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AureliTix</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="order.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand">AureliTix</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="beranda.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="order.html">Order</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="feedback.html">Feedback</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.html">Log In</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero d-flex align-items-center justify-content-center text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+              <h1>BOOK NOW</h1>
+              <p>Don't miss your favorite movie! Book tickets easily and quickly with just a few clicks. Get the best seats for maximum viewing experience!</p>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div class="container my-2">
+    <form id="orderForm">
+      <div class="mb-3">
+        <label for="movie" class="form-label">Movie Name</label>
+        <input type="text" class="form-control" id="movie" placeholder="Enter your movie name">
+      </div>
+      
+      <div class="mb-3">
+        <label for="Time" class="form-label">Show Time</label>
+        <select class="form-select" id="Time">
+          <option value="" disabled selected>Select Your Time</option>
+          <option value="10:00 AM - 12:00 PM">10:00 AM - 12:00 PM</option>
+          <option value="12:00 PM - 4:00 PM">12:00 PM - 4:00 PM</option>
+          <option value="4:00 PM - 6:00 PM">4:00 PM - 6:00 PM</option>
+          <option value="6:00 PM - 9:00 PM">6:00 PM - 9:00 PM</option>
+          <option value="9:00 PM - 12:00 AM">9:00 PM - 12:00 AM</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+      </div>
+
+      <div class="mb-3">
+        <label for="SeatType" class="form-label">Seat Type</label>
+        <select class="form-select" id="SeatType">
+          <option value="" disabled selected>Select seat type</option>
+          <option value="Standard Seat">Standard Seat</option>
+          <option value="VIP Seat">VIP Seat</option>
+          <option value="Premium Seat">Premium Seat</option>
+          <option value="Luxury Seat">Luxury Seat</option>
+          <option value="Recliner Seat">Recliner Seat</option>
+          <option value="Wheelchair Accessible Seat">Wheelchair Accessible Seat</option>
+          <option value="Sofa Seat">Sofa Seat</option>
+          <option value="Bean Bag Seat">Bean Bag Seat</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="RoomType" class="form-label">Room Type</label>
+        <select class="form-select" id="RoomType">
+          <option value="" disabled selected>Select room type</option>
+          <option value="Standard Theater Room">Standard Theater Room</option>
+          <option value="VIP Theater Room">VIP Theater Room</option>
+          <option value="3D/IMAX Theater Room">3D/IMAX Theater Room</option>
+          <option value="Dolby Atmos Theater Room">Dolby Atmos Theater Room</option>
+          <option value="D-Box Theater Room">D-Box Theater Room</option>
+          <option value="4DX Theater Room">4DX Theater Room</option>
+          <option value="IMAX Laser Theater Room">IMAX Laser Theater Room</option>
+          <option value="Premium Theater Room">Premium Theater Room</option>
+          <option value="Family Theater Room">Family Theater Room</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="address" class="form-label">Order Food</label>
+        <textarea class="form-control" id="address" rows="3" placeholder="Enter your food order"></textarea>
+      </div>
+
+      <div class="mb-3 form-check">
+        <input type="checkbox" class="form-check-input" id="terms">
+        <label class="form-check-label" for="terms">I agree to the terms and conditions</label>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Place Order</button>
+    </form>
+  </div>
+
+  <div class="main-confirmation" id="alertBox">
+    <div class="confirmation">
+        <div class="content">
+            <li id="close"><i class="fa-solid fa-xmark"></i></li>
+            <p style="color: black;"> Are you sure to fill this form? After submitting, you will not be able to edit it.</p>
+            <button id="confirm" class="confirm">Confirm</button>
+        </div>
+    </div>
+  </div>
+
+  <footer class="footer-section">
+    <div class="container">
+        <div class="row">
+
+          <div class="col-md-4">
+            <div class="footer-logo" style="color: black;">AureliTix</div>
+            <p style="color: black;">
+                Your Ultimate Destination for Effortless Movie Ticket Booking, Where Convenience Meets Entertainment! Enjoy Exclusive Offers, Swift Booking, and a Curated Selection of the Latest Blockbusters. We’re Committed to Delivering a Seamless Experience That Elevates Your Cinema Adventures, Making Every Movie Night Special and Unforgettable!
+            </p>
+
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-facebook"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="col-md-4 footer-links">
+                <div class="row">
+                    <div class="col-6">
+                        <a href="order.html">Order</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="feedback.html">Feedback</a>
+                    </div>
+                    <div class="col-6">
+                        <a href="#">Support</a>
+                        <a href="#">Knowledge base</a>
+                        <a href="#">Live chat</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-center">
+                <img src="images/clapper board.png" alt="clapper" class="img-fluid footer-clapper">
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        Copyright © 2024. PT. Whoosh Tickets. All Rights Reserved.
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="order.js"></script>
+</body>
+</html>
